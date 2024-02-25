@@ -1,9 +1,7 @@
-FROM python:3.10.6
+FROM node:13-slim
 
+WORKDIR /app
 
-WORKDIR /pyapp
+COPY . /app
 
-COPY . /pyapp
-EXPOSE 8080
-
-CMD ["python3","main.py"]
+CMD ["node","server.js"]
